@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import pro.sky2.HW11.service.CartService;
 
-import java.util.ArrayList;
 import java.util.List;
-
 
 @Controller
 @RequestMapping("/order")
@@ -23,7 +21,7 @@ public class CartController {
 
 
     @GetMapping(path = "addItems")
-    public List<Integer> addItems(@RequestParam("idItem") List<Integer> idItem) {
+    public List<Integer> addItems(@RequestParam() List<Integer> idItem) {
         return cartService.addItems(idItem);
     }
 

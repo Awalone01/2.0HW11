@@ -4,7 +4,7 @@ import java.util.List;
 
 public interface CartService {
 
-    List<Integer> addItems (List<Integer> item);
+    List<Integer> addItems (List<Integer> idItem);
 
     List<Integer> getItems ();
 }
